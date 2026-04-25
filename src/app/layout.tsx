@@ -15,6 +15,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://prasadsdental.com"),
   title: "Prasad's Dental Clinic | Cosmetic & General Dentistry in Guntur",
   description:
     "Prasad's Dental Clinic in Pattabipuram, Guntur offers expert cosmetic, general and restorative dental treatments — from teeth whitening and veneers to painless root canals and dental implants. Book your confident smile makeover today!",
@@ -31,8 +32,27 @@ export const metadata: Metadata = {
     "veneers guntur",
     "braces guntur",
     "invisible aligners guntur",
+    "painless root canal guntur",
+    "porcelain veneers guntur",
+    "full mouth rehabilitation guntur",
+    "pediatric dentist guntur",
+    "orthodontist guntur",
+    "sedation dentistry guntur",
+    "dental crowns guntur",
+    "teeth cleaning guntur",
+    "wisdom tooth extraction guntur",
+    "smile design guntur",
+    "dental clinic pattabipuram",
+    "best cosmetic dentist andhra pradesh",
+    "affordable dental treatment guntur",
+    "laser gum treatment guntur",
+    "dental bonding guntur",
+    "dr prasad dentist guntur",
   ],
+  category: "health",
   authors: [{ name: "Dr. Prasad" }],
+  creator: "Dr. Prasad",
+  publisher: "Prasad's Dental Clinic",
   openGraph: {
     title: "Prasad's Dental Clinic | Cosmetic & General Dentistry in Guntur",
     description:
@@ -68,7 +88,10 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#12716f",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#12716f" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d5a58" },
+  ],
 };
 
 export default function RootLayout({
@@ -115,6 +138,85 @@ export default function RootLayout({
               },
               priceRange: "$$",
               url: "https://prasadsdental.com",
+              medicalSpecialty: [
+                "Cosmetic Dentistry",
+                "General Dentistry",
+                "Restorative Dentistry",
+                "Pediatric Dentistry",
+                "Orthodontics",
+                "Endodontics",
+                "Prosthodontics",
+                "Oral Surgery",
+              ],
+              availableService: [
+                { "@type": "MedicalProcedure", name: "Dental Implants" },
+                { "@type": "MedicalProcedure", name: "Porcelain Veneers" },
+                { "@type": "MedicalProcedure", name: "Teeth Whitening" },
+                { "@type": "MedicalProcedure", name: "Root Canal Treatment" },
+                { "@type": "MedicalProcedure", name: "Invisible Aligners" },
+                { "@type": "MedicalProcedure", name: "Dental Crowns and Bridges" },
+                { "@type": "MedicalProcedure", name: "Full Mouth Rehabilitation" },
+                { "@type": "MedicalProcedure", name: "Sedation Dentistry" },
+              ],
+              founder: {
+                "@type": "Dentist",
+                name: "Dr. Prasad",
+                jobTitle: "Founder & Lead Dentist",
+                medicalSpecialty: "Cosmetic Dentistry",
+              },
+              sameAs: [],
+              hasMap: "https://maps.app.goo.gl/GijnR1f72jUdCEM8A",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What's the best toothbrush and toothpaste for healthy teeth and gums?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "For most people, a medium-bristled toothbrush and a fluoride toothpaste work best to protect enamel and prevent gum problems.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Is instant teeth whitening safe and how does it work?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes — when done by a dental professional, instant teeth whitening is both safe and effective. We use advanced systems that gently break down stains in just one session.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can a smile makeover really be done in just 7 days?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Absolutely. Thanks to modern techniques like veneers, crowns, bonding, and digital smile design, we can transform your smile in as little as a week.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How much does a smile makeover cost?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The cost depends on your needs — from whitening and veneers to full corrections. We create a personalised plan that balances your goals, time, and budget.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Why choose Prasad's Dental Clinic in Guntur?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Prasad's Dental Clinic in Pattabipuram, Guntur is led by Dr. Prasad, known for advanced cosmetic dentistry and natural-looking results with modern technology and personalised care.",
+                  },
+                },
+              ],
             }),
           }}
         />

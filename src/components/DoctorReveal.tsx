@@ -113,6 +113,17 @@ export default function DoctorReveal() {
             and personalized care to every patient.
           </p>
 
+          <div className="doctor-text-animate mt-4 flex flex-wrap gap-2">
+            {["BDS", "Cosmetic Dentistry", "Implantology", "Endodontics", "Orthodontics"].map((q) => (
+              <span
+                key={q}
+                className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]"
+              >
+                {q}
+              </span>
+            ))}
+          </div>
+
           <div className="doctor-text-animate mt-10 grid gap-6 sm:grid-cols-3">
             <CounterStat value={1200} suffix="+" label="Patients catered to" />
             <CounterStat value={3} suffix="+" label="Years of experience" />
@@ -125,6 +136,19 @@ export default function DoctorReveal() {
           >
             Book an Appointment
           </a>
+
+          <div className="doctor-text-animate mt-6 flex items-center gap-3">
+            <Image
+              src="/images/doctor/qualifications-wall.png"
+              alt="Dr. Prasad's certifications and qualifications"
+              width={60}
+              height={60}
+              className="rounded-lg border border-[var(--line)] object-cover"
+            />
+            <p className="text-sm text-[var(--muted)]">
+              Multiple certifications in cosmetic dentistry, implantology, and advanced dental procedures
+            </p>
+          </div>
         </div>
       </div>
     </section>
