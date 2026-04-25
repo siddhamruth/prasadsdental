@@ -76,7 +76,8 @@ export default function SmileCases() {
   const filtered = cases.filter((c) => c.category.includes(active));
 
   return (
-    <section id="results" className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+    <section id="results" className="bg-[#f0f4f8] px-6 py-24 lg:px-10">
+      <div className="mx-auto max-w-7xl">
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +85,7 @@ export default function SmileCases() {
         transition={{ duration: 0.65, ease: "easeOut" }}
       >
         <p className="section-kicker">Visible Outcomes</p>
-        <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-[var(--ink)] sm:text-5xl">
+        <h2 className="mt-4 font-serif-display text-5xl tracking-[-0.04em] text-[var(--ink)] sm:text-6xl">
           Smiles, reimagined
         </h2>
       </motion.div>
@@ -155,6 +156,7 @@ export default function SmileCases() {
           No cases in this category yet. Check back soon!
         </p>
       )}
+      </div>
     </section>
   );
 }

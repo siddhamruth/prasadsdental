@@ -9,14 +9,14 @@ const logos = [
 
 export default function MediaLogos() {
   return (
-    <section className="border-y border-[var(--line)] py-16">
+    <section className="bg-[#1a1a1a] py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-[var(--muted)]"
+          className="mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-white/50"
         >
           As Featured On
         </motion.p>
@@ -28,7 +28,7 @@ export default function MediaLogos() {
           className="flex flex-wrap items-center justify-center gap-6"
         >
           {logos.map((logo) => (
-            <div key={logo} className="media-logo">
+            <div key={logo} className="media-logo bg-white/8 text-white/40">
               {logo}
             </div>
           ))}

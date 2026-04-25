@@ -4,34 +4,19 @@ import dynamic from "next/dynamic";
 
 const Header = dynamic(() => import("@/components/Header"), { ssr: false });
 const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
-const DoctorReveal = dynamic(() => import("@/components/DoctorReveal"), {
-  ssr: false,
-});
+const DoctorReveal = dynamic(() => import("@/components/DoctorReveal"), { ssr: false });
 const TrustBar = dynamic(() => import("@/components/TrustBar"), { ssr: false });
 const Services = dynamic(() => import("@/components/Services"), { ssr: false });
-const Testimonials = dynamic(() => import("@/components/Testimonials"), {
-  ssr: false,
-});
-const SmileCases = dynamic(() => import("@/components/SmileCases"), {
-  ssr: false,
-});
+const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: false });
+const StudioInvite = dynamic(() => import("@/components/StudioInvite"), { ssr: false });
+const CelebritySmiles = dynamic(() => import("@/components/CelebritySmiles"), { ssr: false });
 const Awards = dynamic(() => import("@/components/Awards"), { ssr: false });
-const MediaLogos = dynamic(() => import("@/components/MediaLogos"), {
-  ssr: false,
-});
-const CelebritySmiles = dynamic(() => import("@/components/CelebritySmiles"), {
-  ssr: false,
-});
-const StudioInvite = dynamic(() => import("@/components/StudioInvite"), {
-  ssr: false,
-});
+const MediaLogos = dynamic(() => import("@/components/MediaLogos"), { ssr: false });
+const SmileCases = dynamic(() => import("@/components/SmileCases"), { ssr: false });
 const FAQ = dynamic(() => import("@/components/FAQ"), { ssr: false });
 const Contact = dynamic(() => import("@/components/Contact"), { ssr: false });
 const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
-const FloatingElements = dynamic(
-  () => import("@/components/FloatingElements"),
-  { ssr: false }
-);
+const FloatingElements = dynamic(() => import("@/components/FloatingElements"), { ssr: false });
 
 export default function Home() {
   return (
@@ -43,11 +28,11 @@ export default function Home() {
       <TrustBar />
       <Services />
       <Testimonials />
-      <SmileCases />
+      <StudioInvite />
+      <CelebritySmiles />
       <Awards />
       <MediaLogos />
-      <CelebritySmiles />
-      <StudioInvite />
+      <SmileCases />
       <FAQ />
       <Contact />
       <Footer />
