@@ -9,6 +9,7 @@ const TrustBar = dynamic(() => import("@/components/TrustBar"), { ssr: false });
 const Services = dynamic(() => import("@/components/Services"), { ssr: false });
 const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: false });
 const StudioInvite = dynamic(() => import("@/components/StudioInvite"), { ssr: false });
+const InstagramGrid = dynamic(() => import("@/components/InstagramGrid"), { ssr: false });
 const CelebritySmiles = dynamic(() => import("@/components/CelebritySmiles"), { ssr: false });
 const Awards = dynamic(() => import("@/components/Awards"), { ssr: false });
 const MediaLogos = dynamic(() => import("@/components/MediaLogos"), { ssr: false });
@@ -29,6 +30,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <StudioInvite />
+      <InstagramGrid />
       <CelebritySmiles />
       <Awards />
       <MediaLogos />
