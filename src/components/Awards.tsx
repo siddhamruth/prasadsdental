@@ -22,7 +22,7 @@ const awards = [
 
 export default function Awards() {
   return (
-    <section className="bg-[var(--cream)] py-24">
+    <section className="bg-[var(--ink)] py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -30,8 +30,8 @@ export default function Awards() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <p className="section-kicker">Recognition</p>
-          <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-[var(--ink)] sm:text-5xl">
+          <p className="section-kicker !text-[var(--accent-soft)]">Recognition</p>
+          <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-white sm:text-5xl">
             Awards & Recognition
           </h2>
         </motion.div>
@@ -50,15 +50,15 @@ export default function Awards() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="award-card"
             >
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--accent-soft)]">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/10">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-soft)" strokeWidth="1.5">
                   <path d="M12 15l-3.5 2 .67-3.9L6 10.1l3.92-.57L12 6l2.08 3.53 3.92.57-2.83 2.96.67 3.94z" />
                 </svg>
               </div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.12em] text-[var(--ink)]">
+              <h3 className="text-sm font-bold uppercase tracking-[0.12em] text-white">
                 {award.name}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+              <p className="mt-2 text-sm leading-6 text-white/60">
                 {award.achievement}
               </p>
             </motion.div>

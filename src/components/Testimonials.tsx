@@ -125,7 +125,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-[var(--sand)] py-24">
+    <section className="bg-[var(--ink)] py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -133,8 +133,8 @@ export default function Testimonials() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
-          <p className="section-kicker">Patient Voices</p>
-          <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-[var(--ink)] sm:text-5xl">
+          <p className="section-kicker !text-[var(--accent-soft)]">Patient Voices</p>
+          <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-white sm:text-5xl">
             Smiles That Speak Confidence
           </h2>
         </motion.div>
@@ -167,7 +167,7 @@ export default function Testimonials() {
                   style={{ minHeight: "22rem" }}
                 >
                   {/* Front */}
-                  <div className="flip-card-front flex flex-col justify-between border border-white/60 bg-white/85 p-7 shadow-[0_20px_55px_rgba(63,47,31,0.07)]">
+                  <div className="flip-card-front flex flex-col justify-between border border-white/15 bg-white/10 p-7 shadow-[0_20px_55px_rgba(63,47,31,0.07)]">
                     <div>
                       <Image
                         src={t.image}
@@ -176,28 +176,28 @@ export default function Testimonials() {
                         height={80}
                         className="h-20 w-20 rounded-full object-cover transition hover:scale-[1.04]"
                       />
-                      <h3 className="mt-6 text-xl font-semibold text-[var(--ink)]">
+                      <h3 className="mt-6 text-xl font-semibold text-white">
                         {t.name}
                       </h3>
-                      <p className="mt-1 text-sm font-medium text-[var(--accent)]">
+                      <p className="mt-1 text-sm font-medium text-[var(--accent-soft)]">
                         {t.treatment}
                       </p>
                     </div>
-                    <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+                    <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/40">
                       Tap to read review
                     </p>
                   </div>
 
                   {/* Back */}
-                  <div className="flip-card-back flex flex-col justify-between border border-[var(--accent)] bg-[var(--accent-soft)] p-7">
-                    <p className="text-base leading-7 text-[var(--ink-soft)]">
+                  <div className="flip-card-back flex flex-col justify-between border border-[var(--accent)] bg-[var(--accent)] p-7">
+                    <p className="text-base leading-7 text-white/90">
                       &ldquo;{t.quote}&rdquo;
                     </p>
-                    <footer className="mt-6 border-t border-[var(--line)] pt-4">
-                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
+                    <footer className="mt-6 border-t border-white/20 pt-4">
+                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-white">
                         {t.name}
                       </p>
-                      <p className="mt-1 text-xs text-[var(--muted)]">
+                      <p className="mt-1 text-xs text-white/60">
                         {t.treatment}
                       </p>
                     </footer>
@@ -210,19 +210,19 @@ export default function Testimonials() {
           {/* Navigation arrows */}
           <button
             onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg transition hover:scale-110 hover:bg-white"
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-3 shadow-lg transition hover:scale-110 hover:bg-white/20"
             aria-label="Previous"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" strokeWidth="2.5">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-3 shadow-lg transition hover:scale-110 hover:bg-white"
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-3 shadow-lg transition hover:scale-110 hover:bg-white/20"
             aria-label="Next"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" strokeWidth="2.5">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </button>
@@ -236,8 +236,8 @@ export default function Testimonials() {
               onClick={() => setCurrentIndex(i)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 i === currentIndex
-                  ? "w-8 bg-[var(--accent)]"
-                  : "w-2.5 bg-[var(--line-strong)]"
+                  ? "w-8 bg-[var(--accent-soft)]"
+                  : "w-2.5 bg-white/20"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />

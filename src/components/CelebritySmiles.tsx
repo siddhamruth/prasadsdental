@@ -25,7 +25,7 @@ export default function CelebritySmiles() {
   }, [next]);
 
   return (
-    <section className="bg-[var(--sand)] py-24">
+    <section className="bg-[var(--ink)] py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -34,11 +34,11 @@ export default function CelebritySmiles() {
           transition={{ duration: 0.65, ease: "easeOut" }}
           className="text-center"
         >
-          <p className="section-kicker">Trusted Results</p>
-          <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-[var(--ink)] sm:text-5xl">
+          <p className="section-kicker !text-[var(--accent-soft)]">Trusted Results</p>
+          <h2 className="mt-4 font-serif-display text-4xl tracking-[-0.04em] text-white sm:text-5xl">
             The Smile Celebrities Trust
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[var(--muted)]">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-white/60">
             Discover the treatments and care behind confidence-ready smiles.
             From bespoke whitening to flawless smile makeovers, your
             transformation awaits.
@@ -77,7 +77,7 @@ export default function CelebritySmiles() {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === current ? "w-8 bg-[var(--accent)]" : "w-2.5 bg-[var(--line-strong)]"
+                  i === current ? "w-8 bg-[var(--accent-soft)]" : "w-2.5 bg-white/20"
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />
