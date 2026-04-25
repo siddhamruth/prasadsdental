@@ -189,12 +189,12 @@ export default function Testimonials() {
                   </div>
 
                   {/* Back */}
-                  <div className="flip-card-back flex flex-col justify-between border border-[var(--accent)] bg-[var(--accent)] p-7">
-                    <p className="text-base leading-7 text-white/90">
+                  <div className="flip-card-back flex flex-col justify-between border border-[var(--accent)] bg-[var(--accent)] p-7" itemScope itemType="https://schema.org/Review">
+                    <p itemProp="reviewBody" className="text-base leading-7 text-white/90">
                       &ldquo;{t.quote}&rdquo;
                     </p>
                     <footer className="mt-6 border-t border-white/20 pt-4">
-                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-white">
+                      <p itemProp="author" className="text-sm font-semibold uppercase tracking-[0.24em] text-white">
                         {t.name}
                       </p>
                       <p className="mt-1 text-xs text-white/60">

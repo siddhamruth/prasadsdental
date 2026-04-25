@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 pb-24 lg:px-10">
+    <section id="contact" className="px-6 pb-24 lg:px-10" itemScope itemType="https://schema.org/Dentist">
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,27 +25,37 @@ export default function Contact() {
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {[
-              [
-                "Address",
-                "Stambalagaruvu, Pattabipuram, Guntur-522006, Andhra Pradesh",
-              ],
-              ["Phone", "09398615727"],
-              ["Email", "hello@prasadsdental.com"],
-              ["Hours", "10am \u2013 8pm, Monday \u2013 Saturday"],
-            ].map(([label, value]) => (
-              <div
-                key={label}
-                className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm"
-              >
-                <p className="text-xs uppercase tracking-[0.24em] text-white/62">
-                  {label}
-                </p>
-                <p className="mt-3 text-base font-medium leading-7 text-white">
-                  {value}
-                </p>
-              </div>
-            ))}
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
+              <p className="text-xs uppercase tracking-[0.24em] text-white/62">Address</p>
+              <p className="mt-3 text-base font-medium leading-7 text-white">
+                <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                  <span itemProp="streetAddress">Stambalagaruvu, Pattabipuram</span>,{" "}
+                  <span itemProp="addressLocality">Guntur</span>-
+                  <span itemProp="postalCode">522006</span>,{" "}
+                  <span itemProp="addressRegion">Andhra Pradesh</span>
+                </span>
+              </p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
+              <p className="text-xs uppercase tracking-[0.24em] text-white/62">Phone</p>
+              <p className="mt-3 text-base font-medium leading-7 text-white">
+                <a href="tel:09398615727" itemProp="telephone" className="text-base font-medium leading-7 text-white hover:underline">
+                  09398615727
+                </a>
+              </p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
+              <p className="text-xs uppercase tracking-[0.24em] text-white/62">Email</p>
+              <p className="mt-3 text-base font-medium leading-7 text-white">
+                hello@prasadsdental.com
+              </p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
+              <p className="text-xs uppercase tracking-[0.24em] text-white/62">Hours</p>
+              <p className="mt-3 text-base font-medium leading-7 text-white">
+                10am &ndash; 8pm, Monday &ndash; Saturday
+              </p>
+            </div>
           </div>
         </div>
 

@@ -75,6 +75,8 @@ export default function FAQ() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
+          itemScope
+          itemType="https://schema.org/FAQPage"
         >
           {faqs.map((faq, i) => (
             <motion.div
@@ -82,13 +84,16 @@ export default function FAQ() {
               variants={fadeUp}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="faq-item"
+              itemScope
+              itemType="https://schema.org/Question"
+              itemProp="mainEntity"
             >
               <summary
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 aria-expanded={openIndex === i}
                 aria-label={faq.question}
               >
-                {faq.question}
+                <span itemProp="name">{faq.question}</span>
                 <svg
                   width="20"
                   height="20"
@@ -112,7 +117,13 @@ export default function FAQ() {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="overflow-hidden"
               >
-                <div className="faq-answer">{faq.answer}</div>
+                <div
+                  itemScope
+                  itemType="https://schema.org/Answer"
+                  itemProp="acceptedAnswer"
+                >
+                  <div itemProp="text" className="faq-answer">{faq.answer}</div>
+                </div>
               </motion.div>
             </motion.div>
           ))}

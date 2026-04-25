@@ -91,14 +91,16 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
             className="service-card snap-start"
+            itemScope
+            itemType="https://schema.org/MedicalProcedure"
           >
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--accent-soft)] text-lg font-semibold text-[var(--accent)]">
               {String(i + 1).padStart(2, "0")}
             </div>
-            <h3 className="mt-6 text-xl font-semibold tracking-[-0.03em] text-[var(--ink)]">
+            <h3 itemProp="name" className="mt-6 text-xl font-semibold tracking-[-0.03em] text-[var(--ink)]">
               {service.title}
             </h3>
-            <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+            <p itemProp="description" className="mt-4 text-sm leading-7 text-[var(--muted)]">
               {service.description}
             </p>
             <p className="mt-6 text-sm font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">
