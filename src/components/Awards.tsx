@@ -64,6 +64,21 @@ export default function Awards() {
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-14 text-center"
+        >
+          <a
+            href="#contact"
+            className="inline-block rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/20"
+          >
+            Book an Appointment
+          </a>
+        </motion.div>
       </div>
     </section>
   );

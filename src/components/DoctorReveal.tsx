@@ -1,10 +1,59 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+
+function useCountUp(target: number, duration = 2000) {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    const start = Date.now();
+    const tick = () => {
+      const elapsed = Date.now() - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [started, target, duration]);
+
+  return { count, ref };
+}
+
+function CounterStat({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
+  const { count, ref } = useCountUp(value);
+  return (
+    <div ref={ref}>
+      <p className="text-4xl font-bold tracking-[-0.04em] text-[var(--ink)]">
+        {count}{suffix}
+      </p>
+      <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[var(--muted)]">
+        {label}
+      </p>
+    </div>
+  );
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,20 +114,9 @@ export default function DoctorReveal() {
           </p>
 
           <div className="doctor-text-animate mt-10 grid gap-6 sm:grid-cols-3">
-            {[
-              ["1200+", "Patients catered to"],
-              ["3+", "Years of experience"],
-              ["4.7", "Rating on Google"],
-            ].map(([value, label]) => (
-              <div key={label}>
-                <p className="text-4xl font-bold tracking-[-0.04em] text-[var(--ink)]">
-                  {value}
-                </p>
-                <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[var(--muted)]">
-                  {label}
-                </p>
-              </div>
-            ))}
+            <CounterStat value={1200} suffix="+" label="Patients catered to" />
+            <CounterStat value={3} suffix="+" label="Years of experience" />
+            <CounterStat value={4} suffix=".7" label="Rating on Google" />
           </div>
 
           <a
