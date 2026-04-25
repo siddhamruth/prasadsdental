@@ -143,7 +143,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="mobile-nav lg:hidden"
+            className="mobile-nav overflow-y-auto lg:hidden"
           >
             {[
               { label: "Home", href: "#top" },

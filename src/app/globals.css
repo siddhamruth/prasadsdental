@@ -304,3 +304,87 @@ a, button, input, select, textarea, summary {
 @media (max-width: 640px) {
   .service-card { width: 16rem; }
 }
+
+/* === MOBILE OPTIMIZATIONS === */
+
+/* Smooth touch scrolling */
+@supports (-webkit-overflow-scrolling: touch) {
+  .services-scroll-inner {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Better tap targets (minimum 44px) */
+@media (max-width: 768px) {
+  .nav-link, .faq-item summary, .flip-card {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Prevent horizontal overflow on mobile */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Larger touch targets for dots */
+  .scroll-to-top {
+    height: 3.5rem;
+    width: 3.5rem;
+    bottom: 7rem;
+  }
+
+  /* Stack hero stats vertically on very small screens */
+  @media (max-width: 380px) {
+    .hero-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-orb-left, .hero-orb-right {
+    animation: none;
+  }
+}
+
+/* Focus visible styles for keyboard navigation */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Better form styling on iOS */
+input, select, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 16px; /* Prevents iOS zoom on focus */
+}
+
+/* Image optimization defaults */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth scroll offset for sticky header */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Print styles */
+@media print {
+  .progress-bar, .scroll-to-top, .hamburger, .mobile-nav,
+  [href*="wa.me"] {
+    display: none !important;
+  }
+}

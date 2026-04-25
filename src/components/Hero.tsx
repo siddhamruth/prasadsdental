@@ -40,7 +40,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-7 max-w-3xl font-serif-display text-5xl leading-[0.96] tracking-[-0.05em] text-[var(--ink)] sm:text-6xl lg:text-7xl"
+            className="mt-7 max-w-3xl font-serif-display text-4xl leading-[0.96] tracking-[-0.05em] text-[var(--ink)] sm:text-6xl lg:text-7xl"
           >
             Flaunt the Freedom to Smile.
           </motion.h1>
@@ -76,7 +76,7 @@ export default function Hero() {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="mt-12 grid gap-5 border-t border-[var(--line)] pt-8 sm:grid-cols-3"
+            className="hero-stats mt-12 grid gap-5 border-t border-[var(--line)] pt-8 sm:grid-cols-3"
           >
             {[
               ["1200+", "Smiles enhanced"],

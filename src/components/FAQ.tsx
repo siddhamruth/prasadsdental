@@ -85,6 +85,8 @@ export default function FAQ() {
             >
               <summary
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
+                aria-label={faq.question}
               >
                 {faq.question}
                 <svg
