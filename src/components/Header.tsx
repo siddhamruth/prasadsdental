@@ -29,7 +29,7 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/45 bg-[rgba(247,242,236,0.8)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[rgba(31,35,37,0.6)] backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         {/* Logo */}
         <a href="#top" className="flex items-center gap-3">
@@ -41,17 +41,17 @@ export default function Header() {
             className="rounded-full shadow-[0_15px_35px_rgba(18,113,111,0.25)]"
           />
           <div>
-            <p className="text-[0.72rem] uppercase tracking-[0.35em] text-[var(--muted)]">
+            <p className="text-[0.72rem] uppercase tracking-[0.35em] text-white/70">
               Pattabipuram, Guntur
             </p>
-            <p className="font-serif-display text-xl leading-none text-[var(--ink)]">
+            <p className="font-serif-display text-xl leading-none text-white">
               Prasad&apos;s Dental Clinic
             </p>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 text-sm font-medium text-[var(--ink-soft)] lg:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-white/80 lg:flex">
           <a href="#top" className="nav-link transition hover:text-[var(--accent)]">
             Home
           </a>
@@ -119,7 +119,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <a
             href="#contact"
-            className="hidden rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent)] sm:inline-flex"
+            className="hidden rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)] sm:inline-flex"
           >
             Book Appointment
           </a>

@@ -15,24 +15,30 @@ const stagger = {
 
 export default function Hero() {
   return (
-    <section id="top" className="relative">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="hero-orb hero-orb-left" />
-        <div className="hero-orb hero-orb-right" />
-        <div className="grain-overlay" />
+    <section id="top" className="relative min-h-screen overflow-hidden bg-[var(--ink)]">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero/hero-smile.jpg"
+          alt="Beautiful smile"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--ink)] via-[var(--ink)]/80 to-transparent" />
       </div>
 
-      <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-14 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:py-24">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 lg:px-10">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={stagger}
-          className="relative z-10"
+          className="max-w-2xl py-24"
         >
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-[var(--muted)] backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-white/80 backdrop-blur-sm"
           >
             Premium Dental Experience
           </motion.div>
@@ -40,7 +46,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-7 max-w-3xl font-serif-display text-4xl leading-[0.96] tracking-[-0.05em] text-[var(--ink)] sm:text-6xl lg:text-7xl"
+            className="mt-7 font-serif-display text-5xl leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-8xl"
           >
             Flaunt the Freedom to Smile.
           </motion.h1>
@@ -48,10 +54,10 @@ export default function Hero() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.05 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl"
+            className="mt-6 max-w-lg text-lg leading-8 text-white/70 sm:text-xl"
           >
             We create smiles that feel as good as they look — natural, radiant,
-            and truly yours. At Prasad&apos;s Dental Clinic, Guntur.
+            and truly yours.
           </motion.p>
 
           <motion.div
@@ -61,13 +67,13 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="rounded-full bg-[var(--accent)] px-7 py-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)]"
+              className="rounded-full bg-[var(--accent)] px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)]"
             >
               Book an Appointment
             </a>
             <a
               href="#services"
-              className="rounded-full border border-[var(--line-strong)] bg-white/70 px-7 py-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-[var(--ink)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              className="rounded-full border border-white/30 bg-white/10 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white/20"
             >
               Explore Treatments
             </a>
@@ -76,7 +82,7 @@ export default function Hero() {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="hero-stats mt-12 grid gap-5 border-t border-[var(--line)] pt-8 sm:grid-cols-3"
+            className="hero-stats mt-14 grid gap-8 border-t border-white/15 pt-8 sm:grid-cols-3"
           >
             {[
               ["1200+", "Smiles enhanced"],
@@ -84,10 +90,10 @@ export default function Hero() {
               ["2023", "Established"],
             ].map(([value, label]) => (
               <div key={label}>
-                <p className="text-3xl font-semibold tracking-[-0.04em] text-[var(--ink)]">
+                <p className="text-4xl font-semibold tracking-[-0.04em] text-white">
                   {value}
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
+                <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/50">
                   {label}
                 </p>
               </div>
@@ -95,65 +101,31 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right side — doctor photo + clinic image */}
+        {/* Right side floating card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 40 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-          className="relative z-10"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+          className="absolute bottom-16 right-6 z-10 hidden max-w-xs rounded-[1.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-xl lg:block lg:right-10"
         >
-          <div className="relative overflow-hidden rounded-[2.4rem] border border-white/60 bg-white/70 p-5 shadow-[0_40px_90px_rgba(63,47,31,0.12)] backdrop-blur-xl">
-            <div className="relative overflow-hidden rounded-[1.8rem]">
-              <Image
-                src="/images/hero/hero-bg.jpg"
-                alt="Modern dental clinic interior"
-                width={800}
-                height={600}
-                className="h-auto w-full object-cover"
-                priority
-              />
-              {/* Overlay card */}
-              <div className="absolute bottom-4 left-4 right-4 rounded-[1.5rem] border border-white/45 bg-white/80 p-5 backdrop-blur-xl">
-                <p className="text-xs uppercase tracking-[0.26em] text-[var(--muted)]">
-                  Dr. Prasad
-                </p>
-                <h3 className="mt-2 font-serif-display text-2xl tracking-[-0.04em] text-[var(--ink)] sm:text-3xl">
-                  Your Trusted Smile Expert
-                </h3>
-                <p className="mt-2 max-w-xs text-sm leading-6 text-[var(--muted)]">
-                  Cosmetic, restorative, and general dental care in one refined
-                  clinic experience.
-                </p>
-              </div>
-            </div>
-
-            {/* Bottom info cards */}
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--cream)] p-5">
-                <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
-                  Clinic Snapshot
-                </p>
-                <p className="mt-3 text-sm leading-7 text-[var(--ink-soft)]">
-                  Established in 2023, Pattabipuram, Guntur. Offering premium
-                  dental care with modern technology.
-                </p>
-              </div>
-              <div className="rounded-[1.5rem] border border-[var(--line)] bg-white p-5">
-                <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
-                  Booking Contact
-                </p>
-                <a
-                  href="https://wa.me/919398615727"
-                  className="mt-3 inline-flex items-center text-base font-semibold text-[var(--accent)] transition hover:text-[var(--accent-dark)]"
-                >
-                  +91 93986 15727
-                </a>
-                <p className="mt-2 text-sm leading-7 text-[var(--ink-soft)]">
-                  WhatsApp or call to book your appointment
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-xs uppercase tracking-[0.26em] text-white/60">
+            Dr. Prasad
+          </p>
+          <h3 className="mt-2 font-serif-display text-2xl tracking-[-0.04em] text-white">
+            Your Trusted Smile Expert
+          </h3>
+          <p className="mt-3 text-sm leading-6 text-white/60">
+            Cosmetic, restorative, and general dental care in Pattabipuram, Guntur.
+          </p>
+          <a
+            href="#doctor"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--accent-soft)] transition hover:text-white"
+          >
+            Get to know him
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
         </motion.div>
       </div>
     </section>
