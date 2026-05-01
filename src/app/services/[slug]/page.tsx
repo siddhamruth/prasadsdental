@@ -31,7 +31,7 @@ const services: Record<string, {
       "Affordable payment options available",
     ],
     faqQ: "How much does a smile makeover cost in Guntur?",
-    faqA: "The cost varies based on your specific needs — from basic whitening and bonding (starting ₹5,000) to comprehensive veneer-based makeovers. Dr. Prasad provides a detailed cost estimate during your free consultation.",
+    faqA: "Smile makeover costs at Prasad's Dental Clinic in Guntur range from ₹5,000 for basic whitening and bonding to ₹1,50,000+ for comprehensive veneer-based transformations. We offer a free consultation where Dr. Prasad provides a detailed, personalized cost estimate. EMI options available.",
   },
   "painless-root-canal": {
     title: "Painless Root Canal",
@@ -52,7 +52,7 @@ const services: Record<string, {
       "Post-treatment crown for full restoration",
     ],
     faqQ: "Is root canal really painless at your clinic?",
-    faqA: "Absolutely. We use advanced local anesthesia that completely numbs the area. Most patients tell us they felt nothing during the procedure — many even fall asleep! The days of painful root canals are over.",
+    faqA: "Root canal treatment at our Guntur clinic costs between ₹3,000 for a single-canal front tooth and ₹8,000 for a multi-canal molar. Post-treatment crown (recommended) costs ₹3,000-₹15,000 depending on material (PFM or Zirconia). Free consultation available.",
   },
   "dental-implants": {
     title: "Dental Implants",
@@ -73,7 +73,7 @@ const services: Record<string, {
       "Full mouth implant options available",
     ],
     faqQ: "How much do dental implants cost in Guntur?",
-    faqA: "Single dental implant costs vary based on the implant system and crown material. We offer premium implant systems with comprehensive treatment plans. Schedule a free consultation for an exact quote.",
+    faqA: "Single dental implants at Prasad's Dental Clinic start from ₹20,000 including the implant post. With a zirconia crown, the total ranges from ₹30,000-₹50,000. Full mouth rehabilitation (All-on-4/All-on-6) ranges from ₹2,00,000-₹4,50,000. Free implant consultation available. EMI options offered.",
   },
   "teeth-whitening": {
     title: "Instant Teeth Whitening",
@@ -94,7 +94,7 @@ const services: Record<string, {
       "No sensitivity with our gentle technique",
     ],
     faqQ: "How long does teeth whitening last?",
-    faqA: "Professional whitening results typically last 6-12 months, depending on your diet and habits. With our take-home maintenance kit and avoiding excessive coffee/tea/tobacco, results can last even longer.",
+    faqA: "Professional in-office teeth whitening at our Guntur clinic costs between ₹3,000 and ₹10,000 depending on the whitening system used. Take-home whitening kits are available from ₹1,500. Results last 6-12 months with proper care. Book a free consultation.",
   },
   "porcelain-veneers": {
     title: "Porcelain Veneers",
@@ -115,7 +115,7 @@ const services: Record<string, {
       "10-15 year lifespan with proper care",
     ],
     faqQ: "How long do porcelain veneers last?",
-    faqA: "With proper care, porcelain veneers last 10-15 years or more. They are stain-resistant and durable. We provide detailed aftercare instructions to maximize their lifespan.",
+    faqA: "Porcelain veneers at Prasad's Dental Clinic in Guntur cost ₹8,000-₹25,000 per tooth, depending on the porcelain type and complexity. A full smile makeover with 6-8 veneers typically ranges from ₹60,000-₹2,00,000. Free consultation with digital smile preview included.",
   },
   "invisible-aligners": {
     title: "Invisible Aligners",
@@ -136,7 +136,7 @@ const services: Record<string, {
       "Fewer clinic visits than traditional braces",
     ],
     faqQ: "Are invisible aligners effective for crooked teeth?",
-    faqA: "Yes, invisible aligners effectively treat most cases of crooked, crowded, or gapped teeth. During your consultation, Dr. Prasad will assess whether aligners are suitable for your specific case.",
+    faqA: "Clear aligner treatment in Guntur costs between ₹80,000 and ₹2,50,000 depending on case complexity and aligner brand. Treatment duration is typically 6-18 months. We offer a free 3D smile simulation during consultation. EMI plans available.",
   },
   "dental-crowns": {
     title: "Dental Crowns & Bridges",
@@ -150,7 +150,7 @@ const services: Record<string, {
     ],
     benefits: ["Premium zirconia and porcelain materials", "Natural look and comfortable fit", "Digital impressions — no messy putty", "Completed in 3-5 days", "Strengthens and protects damaged teeth", "Long-lasting — 10-15 years with care"],
     faqQ: "What is the difference between a crown and a bridge?",
-    faqA: "A crown covers a single damaged tooth, while a bridge replaces one or more missing teeth by anchoring to adjacent teeth. Dr. Prasad will recommend the best option for your situation.",
+    faqA: "Dental crown costs at our Guntur clinic: PFM (porcelain-fused-to-metal) crowns from ₹3,000, ceramic crowns from ₹6,000, zirconia crowns from ₹8,000-₹15,000. Bridges are priced per unit. Free consultation to determine the best option for you.",
   },
   "kids-dentistry": {
     title: "Kids Dentistry",
@@ -164,7 +164,7 @@ const services: Record<string, {
     ],
     benefits: ["Gentle, child-friendly approach", "Painless treatments with modern techniques", "Preventive care — fluoride and sealants", "Education for children and parents", "Fun, stress-free clinic environment", "First visit recommended by age 1"],
     faqQ: "At what age should my child first visit the dentist?",
-    faqA: "We recommend a first dental visit by age 1 or when the first tooth appears. Early visits help us prevent problems and get your child comfortable with dental care.",
+    faqA: "We recommend first dental visits by age 1 or when the first tooth appears. Pediatric checkups and fluoride treatment start from ₹500. Sealants, fillings, and other treatments are priced affordably. We focus on making dental visits fun and stress-free for children.",
   },
   "braces": {
     title: "Clear Braces",
@@ -178,7 +178,7 @@ const services: Record<string, {
     ],
     benefits: ["Tooth-colored — minimal visibility", "Effective for complex cases", "Digital treatment planning", "Regular progress monitoring", "Suitable for all ages", "12-24 month typical treatment"],
     faqQ: "Are clear braces as effective as metal braces?",
-    faqA: "Yes, clear braces are equally effective for most orthodontic cases. They use the same principles of tooth movement, just with less visible materials.",
+    faqA: "Clear/ceramic braces at Prasad's Dental Clinic in Guntur cost ₹35,000-₹70,000 for full treatment. Metal braces are available from ₹25,000. Treatment duration is typically 12-24 months. Monthly adjustment visits are included. EMI options available.",
   },
   "teeth-cleaning": {
     title: "Teeth Cleaning & Polishing",
@@ -192,7 +192,7 @@ const services: Record<string, {
     ],
     benefits: ["Removes plaque and tartar buildup", "Prevents gum disease and cavities", "Polishing removes surface stains", "Painless 30-45 minute session", "Recommended every 6 months", "Fresher breath and healthier gums"],
     faqQ: "How often should I get professional cleaning?",
-    faqA: "We recommend professional cleaning every 6 months. If you have gum disease or are prone to tartar buildup, more frequent cleanings may be advised.",
+    faqA: "Professional teeth cleaning and polishing at our Guntur clinic costs ₹500-₹2,000 per session. Deep cleaning (scaling and root planing) for gum disease may cost more. We recommend professional cleaning every 6 months.",
   },
   "laser-gum-treatment": {
     title: "Laser Gum Treatment",
@@ -206,7 +206,7 @@ const services: Record<string, {
     ],
     benefits: ["Minimally invasive — no scalpel", "Less bleeding and swelling", "Faster healing than traditional surgery", "Precise treatment targeting", "Minimal discomfort", "Same-day return to activities"],
     faqQ: "Is laser gum treatment painful?",
-    faqA: "Laser gum treatment is significantly less painful than traditional gum surgery. Most patients report only mild discomfort, and the healing is much faster.",
+    faqA: "Laser gum treatment costs vary based on the extent of gum disease and area treated, typically ranging from ₹3,000-₹15,000. Cosmetic gum contouring for gummy smiles starts from ₹5,000. Free gum health assessment during consultation.",
   },
   "wisdom-tooth-extraction": {
     title: "Wisdom Tooth Extraction",
@@ -220,7 +220,7 @@ const services: Record<string, {
     ],
     benefits: ["Painless extraction under anesthesia", "Digital X-ray guided procedure", "Sedation option for anxious patients", "Quick 3-5 day recovery", "Prevents future dental problems", "Post-operative care guidance"],
     faqQ: "How long is the recovery after wisdom tooth removal?",
-    faqA: "Most patients recover within 3-5 days. We provide detailed post-operative instructions, pain management, and follow-up care to ensure a smooth recovery.",
+    faqA: "Simple wisdom tooth extraction at our Guntur clinic costs ₹1,000-₹2,500. Surgical extraction of impacted wisdom teeth ranges from ₹3,000-₹8,000 depending on complexity. Includes post-operative care guidance. Same-day evaluation available.",
   },
   "cavity-fillings": {
     title: "Cavity Fillings",
@@ -234,7 +234,7 @@ const services: Record<string, {
     ],
     benefits: ["Tooth-colored — virtually invisible", "Preserves natural tooth structure", "Single 20-30 minute visit", "Painless with modern anesthesia", "Strong bonding to tooth", "Mercury-free and biocompatible"],
     faqQ: "Are tooth-colored fillings as durable as silver ones?",
-    faqA: "Modern composite fillings are very durable and suitable for most cavities. They bond directly to the tooth, which can actually strengthen the remaining structure. For very large cavities, we may recommend a crown instead.",
+    faqA: "Tooth-colored composite fillings at Prasad's Dental Clinic cost ₹500-₹3,000 per tooth depending on cavity size and location. The procedure takes just 20-30 minutes. We use mercury-free, biocompatible materials.",
   },
   "tooth-bonding": {
     title: "Tooth Bonding",
@@ -248,7 +248,7 @@ const services: Record<string, {
     ],
     benefits: ["Same-day results in one visit", "No anesthesia needed usually", "Affordable cosmetic solution", "Natural tooth-color matching", "30-60 minutes per tooth", "Preserves natural tooth structure"],
     faqQ: "How long does dental bonding last?",
-    faqA: "Dental bonding typically lasts 5-10 years with proper care. Avoid biting hard objects and maintain good oral hygiene to maximize longevity.",
+    faqA: "Dental bonding at our clinic costs ₹1,500-₹5,000 per tooth. Most bonding procedures are completed in a single 30-60 minute visit without anesthesia. Affordable alternative to veneers for minor cosmetic improvements.",
   },
   "dentures": {
     title: "Dentures",
@@ -262,7 +262,7 @@ const services: Record<string, {
     ],
     benefits: ["Custom-fitted for comfort", "Natural-looking appearance", "Full and partial options", "Multiple material choices", "Implant-supported option available", "Easy maintenance and care"],
     faqQ: "How long does it take to get dentures?",
-    faqA: "Custom dentures typically take 3-4 weeks from impression to final fitting. We ensure precise fit through multiple try-in appointments.",
+    faqA: "Full dentures at Prasad's Dental Clinic in Guntur start from ₹8,000. Flexible/BPS dentures range from ₹15,000-₹30,000. Partial dentures (acrylic) from ₹5,000. Cast partial dentures from ₹12,000. Implant-supported dentures available for enhanced stability.",
   },
   "sedation-dentistry": {
     title: "Sedation Dentistry",
@@ -276,7 +276,7 @@ const services: Record<string, {
     ],
     benefits: ["Safe nitrous oxide sedation", "Remain conscious and responsive", "Effects wear off quickly", "Ideal for anxious patients", "Can be used for any procedure", "No needles for sedation delivery"],
     faqQ: "Is sedation dentistry safe?",
-    faqA: "Yes, nitrous oxide sedation is extremely safe with decades of proven use in dentistry. You remain conscious and breathing normally throughout. The effects wear off within minutes after treatment.",
+    faqA: "Nitrous oxide (laughing gas) sedation is available at our Guntur clinic as an add-on to any procedure. The additional cost is typically ₹1,000-₹3,000 per session. It's ideal for anxious patients and is completely safe with no lingering effects.",
   },
   "full-mouth-rehabilitation": {
     title: "Full Mouth Rehabilitation",
@@ -290,7 +290,7 @@ const services: Record<string, {
     ],
     benefits: ["Comprehensive — addresses all dental issues", "Customized phased treatment plan", "Combines multiple specialties", "Restores function and aesthetics", "Improves bite and jaw alignment", "Life-changing results"],
     faqQ: "How long does full mouth rehabilitation take?",
-    faqA: "Treatment time varies from a few weeks to several months depending on complexity. Dr. Prasad will provide a detailed timeline during your consultation.",
+    faqA: "Full mouth rehabilitation costs vary significantly based on the combination of treatments needed — typically ranging from ₹1,00,000 to ₹5,00,000+. Dr. Prasad provides a comprehensive evaluation and phased treatment plan during a free consultation. EMI options available.",
   },
 };
 
