@@ -294,6 +294,26 @@ const services: Record<string, {
   },
 };
 
+const relatedServices: Record<string, string[]> = {
+  "smile-makeover": ["porcelain-veneers", "teeth-whitening", "invisible-aligners"],
+  "painless-root-canal": ["dental-crowns", "cavity-fillings", "sedation-dentistry"],
+  "dental-implants": ["dental-crowns", "full-mouth-rehabilitation", "dentures"],
+  "teeth-whitening": ["smile-makeover", "porcelain-veneers", "teeth-cleaning"],
+  "porcelain-veneers": ["smile-makeover", "tooth-bonding", "teeth-whitening"],
+  "invisible-aligners": ["braces", "smile-makeover", "teeth-cleaning"],
+  "dental-crowns": ["dental-implants", "painless-root-canal", "full-mouth-rehabilitation"],
+  "kids-dentistry": ["cavity-fillings", "teeth-cleaning", "sedation-dentistry"],
+  "braces": ["invisible-aligners", "teeth-cleaning", "smile-makeover"],
+  "teeth-cleaning": ["teeth-whitening", "laser-gum-treatment", "cavity-fillings"],
+  "laser-gum-treatment": ["teeth-cleaning", "dental-crowns", "smile-makeover"],
+  "wisdom-tooth-extraction": ["sedation-dentistry", "cavity-fillings", "dental-implants"],
+  "cavity-fillings": ["painless-root-canal", "teeth-cleaning", "tooth-bonding"],
+  "tooth-bonding": ["porcelain-veneers", "smile-makeover", "cavity-fillings"],
+  "dentures": ["dental-implants", "dental-crowns", "full-mouth-rehabilitation"],
+  "sedation-dentistry": ["painless-root-canal", "wisdom-tooth-extraction", "kids-dentistry"],
+  "full-mouth-rehabilitation": ["dental-implants", "dental-crowns", "porcelain-veneers"],
+};
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -403,6 +423,28 @@ export default async function ServicePage({ params }: Props) {
           <p className="text-sm text-[var(--muted)]">
             Prasad&apos;s Dental Clinic offers {service.title.toLowerCase()} for patients in Guntur, Pattabipuram, Tenali, Mangalagiri, Vijayawada, Narasaraopet, and surrounding areas in Andhra Pradesh.
           </p>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="bg-[var(--cream)] px-6 py-12 lg:px-10">
+        <div className="mx-auto max-w-4xl">
+          <h3 className="text-center text-lg font-semibold text-[var(--ink)]">Related Treatments</h3>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {(relatedServices[slug] || []).map((relSlug) => {
+              const relService = services[relSlug];
+              if (!relService) return null;
+              return (
+                <Link
+                  key={relSlug}
+                  href={`/services/${relSlug}`}
+                  className="rounded-full border border-[var(--line)] bg-white px-5 py-2.5 text-sm font-medium text-[var(--ink-soft)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  {relService.title}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 

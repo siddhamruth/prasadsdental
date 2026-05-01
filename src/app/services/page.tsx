@@ -78,6 +78,12 @@ export default function ServicesPage() {
         <p className="mx-auto mt-4 max-w-lg text-white/70">
           Book a free consultation with Dr. Prasad and get a personalized treatment plan.
         </p>
+        <p className="mt-3 text-white/60">
+          Or call us directly:{" "}
+          <a href="tel:09398615727" className="font-bold text-white underline">
+            09398615727
+          </a>
+        </p>
         <a
           href="/contact"
           className="mt-8 inline-block rounded-full bg-[var(--accent)] px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)]"
