@@ -5,8 +5,8 @@
   --cream: #f3ece4;
   --sand: #ece2d8;
   --ink: #1f2325;
-  --ink-soft: #384143;
-  --muted: #667277;
+  --ink-soft: #2d3436;
+  --muted: #4a5559;
   --accent: #12716f;
   --accent-dark: #0d5a58;
   --accent-soft: #d7efee;
@@ -46,8 +46,8 @@ a, button, input, select, textarea, summary {
 .font-serif-display { font-family: var(--font-cormorant), serif; }
 
 .section-kicker {
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 800;
   letter-spacing: 0.34em;
   text-transform: uppercase;
   color: var(--accent);
@@ -112,7 +112,7 @@ a, button, input, select, textarea, summary {
   flex-shrink: 0;
   width: 22rem;
   border-radius: 2rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   background: rgba(255, 255, 255, 0.85);
   padding: 2rem;
   transition: all 0.35s ease;

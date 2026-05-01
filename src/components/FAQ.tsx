@@ -99,7 +99,7 @@ export default function FAQ() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="var(--muted)"
+                  stroke="var(--ink-soft)"
                   strokeWidth="2"
                   className={`flex-shrink-0 transition-transform duration-300 ${
                     openIndex === i ? "rotate-180" : ""

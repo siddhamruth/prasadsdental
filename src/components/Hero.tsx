@@ -38,7 +38,7 @@ export default function Hero() {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-white/80 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-white/90 backdrop-blur-sm"
           >
             Premium Dental Experience
           </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-7 font-serif-display text-5xl leading-[0.96] tracking-[-0.05em] text-white sm:text-6xl lg:text-8xl"
+            className="mt-7 font-serif-display text-5xl leading-[0.96] tracking-[-0.05em] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] sm:text-6xl lg:text-8xl"
           >
             Flaunt the Freedom to Smile.
           </motion.h1>
@@ -54,7 +54,7 @@ export default function Hero() {
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.05 }}
-            className="mt-6 max-w-lg text-lg leading-8 text-white/70 sm:text-xl"
+            className="mt-6 max-w-lg text-lg leading-8 text-white/85 sm:text-xl"
           >
             We create smiles that feel as good as they look — natural, radiant,
             and truly yours.
@@ -93,7 +93,7 @@ export default function Hero() {
                 <p className="text-4xl font-semibold tracking-[-0.04em] text-white">
                   {value}
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/50">
+                <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/65">
                   {label}
                 </p>
               </div>

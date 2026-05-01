@@ -28,7 +28,7 @@ export default function StudioInvite() {
             <h2 className="mt-5 max-w-2xl font-serif-display text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
               The world <em>aligns</em> at Guntur
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/78">
+            <p className="mt-6 max-w-xl text-base leading-8 text-white/90">
               We would much rather have our clinic brimming with smiles and
               chatter than refer to it as anything clinical. Drop in and
               experience the Prasad&apos;s Dental difference for yourself.

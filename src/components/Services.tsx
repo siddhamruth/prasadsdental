@@ -44,7 +44,7 @@ export default function Services() {
           transition={{ duration: 0.65, ease: "easeOut" }}
         >
           <p className="section-kicker">Comprehensive Dentistry</p>
-          <h2 className="mt-4 max-w-2xl font-serif-display text-4xl tracking-[-0.04em] text-[var(--ink)] sm:text-5xl lg:text-6xl">
+          <h2 className="mt-4 max-w-2xl font-serif-display text-4xl tracking-[-0.04em] text-[var(--ink)] sm:text-5xl lg:text-6xl xl:text-7xl">
             <em>Goodbye</em> Dental Dilemmas
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg">

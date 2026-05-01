@@ -34,7 +34,7 @@ export default function TrustBar() {
             key={item}
             variants={fadeUp}
             transition={{ duration: 0.55, ease: "easeOut" }}
-            className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]"
+            className="text-base font-semibold uppercase tracking-[0.22em] text-[var(--ink-soft)]"
           >
             {item}
           </motion.p>

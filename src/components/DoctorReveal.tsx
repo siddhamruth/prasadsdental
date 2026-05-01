@@ -104,10 +104,10 @@ export default function DoctorReveal() {
           <h2 className="doctor-text-animate mt-4 font-serif-display text-5xl tracking-[-0.04em] text-[var(--ink)] sm:text-6xl lg:text-7xl">
             Dr. Prasad
           </h2>
-          <p className="doctor-text-animate mt-3 text-xl font-medium text-[var(--accent)]">
+          <p className="doctor-text-animate mt-3 text-2xl font-medium text-[var(--accent)]">
             Your Trusted Smile Expert
           </p>
-          <p className="doctor-text-animate mt-6 max-w-lg text-base leading-7 text-[var(--muted)]">
+          <p className="doctor-text-animate mt-6 max-w-lg text-lg leading-7 text-[var(--muted)]">
             With a passion for transforming smiles and years of experience in
             cosmetic and general dentistry, Dr. Prasad brings precision, warmth,
             and personalized care to every patient.
