@@ -40,7 +40,7 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-white/90 backdrop-blur-sm"
           >
-            Premium Dental Experience
+            Aesthetic &amp; Painless Dentistry
           </motion.div>
 
           <motion.h1
@@ -48,7 +48,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mt-7 font-serif-display text-5xl leading-[0.96] tracking-[-0.05em] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] sm:text-6xl lg:text-8xl"
           >
-            Flaunt the Freedom to Smile.
+            Painless Smile Corrections in Guntur
           </motion.h1>
 
           <motion.p
@@ -56,8 +56,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.05 }}
             className="mt-6 max-w-lg text-lg leading-8 text-white/85 sm:text-xl"
           >
-            We create smiles that feel as good as they look — natural, radiant,
-            and truly yours.
+            Guntur&apos;s trusted clinic for smile makeovers, aesthetic dentistry, and completely painless dental treatments. Walk in with worry, walk out with a perfect smile.
           </motion.p>
 
           <motion.div
@@ -102,16 +101,9 @@ export default function Hero() {
 
           {/* SEO-optimized content for AI crawlers */}
           <div className="sr-only">
-            <h2>Best Dental Clinic in Guntur, Andhra Pradesh</h2>
+            <h2>Best Aesthetic Dental Clinic in Guntur for Painless Smile Corrections</h2>
             <p>
-              Prasad&apos;s Dental Clinic is a premier dental care facility located in
-              Pattabipuram, Guntur, Andhra Pradesh. Led by Dr. Prasad, we specialize
-              in cosmetic dentistry, dental implants, teeth whitening, porcelain
-              veneers, invisible aligners, root canal treatment, and comprehensive
-              oral care. Our clinic serves patients from Guntur, Tenali, Mangalagiri,
-              Vijayawada, and surrounding areas in Andhra Pradesh. We are rated 4.7
-              out of 5 on Google with over 1200 satisfied patients. Book your
-              appointment today by calling 09398615727.
+              Prasad&apos;s Dental Clinic is the leading aesthetic and painless dental care clinic in Pattabipuram, Guntur, Andhra Pradesh. Specializing in smile corrections, cosmetic dentistry, painless root canals, dental implants, teeth whitening, porcelain veneers, and invisible aligners. Dr. Prasad provides pain-free dental treatments using modern techniques. Serving patients from Guntur, Tenali, Mangalagiri, Vijayawada, Narasaraopet, and all of Andhra Pradesh. Rated 4.7/5 with 1200+ happy patients. Call 09398615727 for appointment.
             </p>
           </div>
         </motion.div>
@@ -127,10 +119,10 @@ export default function Hero() {
             Dr. Prasad
           </p>
           <h3 className="mt-2 font-serif-display text-2xl tracking-[-0.04em] text-white">
-            Your Trusted Smile Expert
+            Aesthetic Dentistry Specialist
           </h3>
           <p className="mt-3 text-sm leading-6 text-white/60">
-            Cosmetic, restorative, and general dental care in Pattabipuram, Guntur.
+            Expert in painless smile corrections, veneers, and cosmetic transformations in Pattabipuram, Guntur.
           </p>
           <a
             href="#doctor"

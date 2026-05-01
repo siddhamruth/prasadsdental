@@ -5,23 +5,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const services = [
-  "Full Mouth Rehabilitation",
-  "Dental Implants",
-  "Bone Grafting and Sinus Lift",
-  "Dentures",
-  "Dental Crowns and Bridges",
-  "Sedation Dentistry",
-  "Dentistry For Kids",
-  "Porcelain Veneers",
-  "Invisible Aligners",
-  "Braces (Clear)",
-  "Teeth Cleaning And Polishing",
-  "Laser Gum Treatments",
-  "Painless Root Canals",
-  "Wisdom Tooth Extractions",
-  "Cavity Fillings",
-  "Instant Teeth Whitening",
-  "Tooth Bondings",
+  { label: "Smile Makeover", slug: "smile-makeover" },
+  { label: "Painless Root Canal", slug: "painless-root-canal" },
+  { label: "Dental Implants", slug: "dental-implants" },
+  { label: "Instant Teeth Whitening", slug: "teeth-whitening" },
+  { label: "Porcelain Veneers", slug: "porcelain-veneers" },
+  { label: "Invisible Aligners", slug: "invisible-aligners" },
+  { label: "Dental Crowns & Bridges", slug: "dental-crowns" },
+  { label: "Kids Dentistry", slug: "kids-dentistry" },
+  { label: "Braces (Clear)", slug: "braces" },
+  { label: "Teeth Cleaning & Polishing", slug: "teeth-cleaning" },
+  { label: "Laser Gum Treatment", slug: "laser-gum-treatment" },
+  { label: "Wisdom Tooth Extraction", slug: "wisdom-tooth-extraction" },
+  { label: "Cavity Fillings", slug: "cavity-fillings" },
+  { label: "Tooth Bonding", slug: "tooth-bonding" },
+  { label: "Dentures", slug: "dentures" },
+  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+  { label: "Full Mouth Rehabilitation", slug: "full-mouth-rehabilitation" },
 ];
 
 export default function Header() {
@@ -32,7 +32,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[rgba(31,35,37,0.6)] backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         {/* Logo */}
-        <a href="#top" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo/logo.svg"
             alt="Prasad's Dental Clinic"
@@ -52,10 +52,10 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 text-sm font-medium text-white/80 lg:flex">
-          <a href="#top" className="nav-link transition hover:text-[var(--accent)]">
+          <a href="/" className="nav-link transition hover:text-[var(--accent)]">
             Home
           </a>
-          <a href="#doctor" className="nav-link transition hover:text-[var(--accent)]">
+          <a href="/about" className="nav-link transition hover:text-[var(--accent)]">
             About Dr. Prasad
           </a>
 
@@ -65,7 +65,7 @@ export default function Header() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button className="nav-link flex items-center gap-1 transition hover:text-[var(--accent)]">
+            <a href="/services" className="nav-link flex items-center gap-1 transition hover:text-[var(--accent)]">
               Services
               <svg
                 width="12"
@@ -78,7 +78,7 @@ export default function Header() {
               >
                 <path d="M6 9l6 6 6-6" />
               </svg>
-            </button>
+            </a>
             <AnimatePresence>
               {servicesOpen && (
                 <motion.div
@@ -91,11 +91,11 @@ export default function Header() {
                   <div className="max-h-80 overflow-y-auto">
                     {services.map((service) => (
                       <a
-                        key={service}
-                        href="#services"
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
                         className="block rounded-xl px-4 py-2.5 text-sm text-[var(--ink-soft)] transition hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"
                       >
-                        {service}
+                        {service.label}
                       </a>
                     ))}
                   </div>
@@ -104,13 +104,13 @@ export default function Header() {
             </AnimatePresence>
           </div>
 
-          <a href="#results" className="nav-link transition hover:text-[var(--accent)]">
+          <a href="/#results" className="nav-link transition hover:text-[var(--accent)]">
             Results
           </a>
-          <a href="#faq" className="nav-link transition hover:text-[var(--accent)]">
+          <a href="/#faq" className="nav-link transition hover:text-[var(--accent)]">
             FAQ
           </a>
-          <a href="#contact" className="nav-link transition hover:text-[var(--accent)]">
+          <a href="/contact" className="nav-link transition hover:text-[var(--accent)]">
             Contact
           </a>
         </nav>
@@ -118,7 +118,7 @@ export default function Header() {
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-4">
           <a
-            href="#contact"
+            href="/contact"
             className="hidden rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)] sm:inline-flex"
           >
             Book Appointment
@@ -146,12 +146,12 @@ export default function Header() {
             className="mobile-nav overflow-y-auto lg:hidden"
           >
             {[
-              { label: "Home", href: "#top" },
-              { label: "About Dr. Prasad", href: "#doctor" },
-              { label: "Services", href: "#services" },
-              { label: "Results", href: "#results" },
-              { label: "FAQ", href: "#faq" },
-              { label: "Contact", href: "#contact" },
+              { label: "Home", href: "/" },
+              { label: "About Dr. Prasad", href: "/about" },
+              { label: "Services", href: "/services" },
+              { label: "Results", href: "/#results" },
+              { label: "FAQ", href: "/#faq" },
+              { label: "Contact", href: "/contact" },
             ].map((item) => (
               <a
                 key={item.label}
@@ -163,7 +163,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/contact"
               onClick={() => setMobileOpen(false)}
               className="mt-4 rounded-full bg-[var(--accent)] px-6 py-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-white"
             >

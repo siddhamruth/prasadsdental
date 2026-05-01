@@ -16,9 +16,9 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://prasadsdental.com"),
-  title: "Prasad's Dental Clinic | Cosmetic & General Dentistry in Guntur",
+  title: "Prasad's Dental Clinic | Painless Smile Corrections in Guntur",
   description:
-    "Prasad's Dental Clinic in Pattabipuram, Guntur offers expert cosmetic, general and restorative dental treatments — from teeth whitening and veneers to painless root canals and dental implants. Book your confident smile makeover today!",
+    "Guntur's trusted aesthetic dental clinic specializing in painless smile corrections, cosmetic dentistry, dental implants, and teeth whitening. Led by Dr. Prasad in Pattabipuram. Call 09398615727.",
   keywords: [
     "dental clinic guntur",
     "dentist in pattabipuram",
