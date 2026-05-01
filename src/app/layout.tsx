@@ -220,6 +220,30 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Prasad's Dental Clinic",
+              url: "https://prasadsdental.com",
+              publisher: {
+                "@type": "Organization",
+                name: "Prasad's Dental Clinic",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://prasadsdental.com/images/logo/logo.svg",
+                },
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://prasadsdental.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
         {children}
       </body>
     </html>

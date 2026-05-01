@@ -406,7 +406,37 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* JSON-LD */}
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://prasadsdental.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://prasadsdental.com/services",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: service.title,
+                item: `https://prasadsdental.com/services/${slug}`,
+              },
+            ],
+          }),
+        }}
+      />
+      {/* MedicalProcedure Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
