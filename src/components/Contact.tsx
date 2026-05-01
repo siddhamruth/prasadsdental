@@ -59,7 +59,19 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className="rounded-[2rem] border border-white/12 bg-white/10 p-6 backdrop-blur-md">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            const name = formData.get("name") || "";
+            const phone = formData.get("phone") || "";
+            const treatment = formData.get("treatment") || "";
+            const message = formData.get("message") || "";
+            const whatsappText = `Hi, I'm ${name}. I'm interested in ${treatment}. ${message}. My number: ${phone}`;
+            window.open(`https://wa.me/919398615727?text=${encodeURIComponent(whatsappText)}`, "_blank");
+          }}
+          className="rounded-[2rem] border border-white/12 bg-white/10 p-6 backdrop-blur-md"
+        >
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="space-y-2">
               <span className="text-sm font-medium text-white/88">
@@ -67,6 +79,7 @@ export default function Contact() {
               </span>
               <input
                 type="text"
+                name="name"
                 placeholder="Your name"
                 className="w-full rounded-2xl border border-white/12 bg-white/94 px-4 py-3 text-sm text-[var(--ink)] outline-none ring-0 placeholder:text-slate-400 focus:border-[var(--accent)]"
               />
@@ -77,6 +90,7 @@ export default function Contact() {
               </span>
               <input
                 type="tel"
+                name="phone"
                 placeholder="+91"
                 className="w-full rounded-2xl border border-white/12 bg-white/94 px-4 py-3 text-sm text-[var(--ink)] outline-none ring-0 placeholder:text-slate-400 focus:border-[var(--accent)]"
               />
@@ -87,7 +101,7 @@ export default function Contact() {
             <span className="text-sm font-medium text-white/88">
               Preferred Treatment
             </span>
-            <select className="w-full rounded-2xl border border-white/12 bg-white/94 px-4 py-3 text-sm text-[var(--ink)] outline-none focus:border-[var(--accent)]">
+            <select name="treatment" className="w-full rounded-2xl border border-white/12 bg-white/94 px-4 py-3 text-sm text-[var(--ink)] outline-none focus:border-[var(--accent)]">
               <option>Smile Consultation</option>
               <option>Dental Implants</option>
               <option>Veneers</option>
@@ -102,6 +116,7 @@ export default function Contact() {
           <label className="mt-4 block space-y-2">
             <span className="text-sm font-medium text-white/88">Message</span>
             <textarea
+              name="message"
               rows={5}
               placeholder="Tell us what you would like help with."
               className="w-full rounded-[1.5rem] border border-white/12 bg-white/94 px-4 py-3 text-sm text-[var(--ink)] outline-none placeholder:text-slate-400 focus:border-[var(--accent)]"
@@ -109,7 +124,7 @@ export default function Contact() {
           </label>
 
           <button
-            type="button"
+            type="submit"
             className="mt-6 w-full rounded-full bg-white px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-[var(--ink)] transition hover:-translate-y-0.5 hover:bg-[var(--cream)]"
           >
             Send Appointment Request

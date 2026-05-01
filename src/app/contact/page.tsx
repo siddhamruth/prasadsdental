@@ -109,9 +109,14 @@ export default function ContactPage() {
                 <span className="text-sm font-medium text-[var(--ink)]">Message</span>
                 <textarea rows={4} placeholder="Tell us about your dental concern..." className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm outline-none focus:border-[var(--accent)]" />
               </label>
-              <button type="button" className="w-full rounded-full bg-[var(--accent)] px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)]">
-                Book Appointment
-              </button>
+              <a
+                href="https://wa.me/919398615727?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Prasad's%20Dental%20Clinic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 block w-full rounded-full bg-[var(--accent)] px-6 py-4 text-center text-sm font-semibold uppercase tracking-[0.22em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-dark)]"
+              >
+                Book via WhatsApp
+              </a>
             </form>
           </div>
         </div>

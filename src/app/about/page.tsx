@@ -94,7 +94,11 @@ export default function AboutPage() {
                 ].map(([label, value]) => (
                   <div key={label} className="flex justify-between border-b border-[var(--line)] pb-3">
                     <span className="text-sm text-[var(--muted)]">{label}</span>
-                    <span className="text-sm font-semibold text-[var(--ink)]">{value}</span>
+                    {label === "Phone" ? (
+                      <a href={`tel:${value}`} className="text-sm font-semibold text-[var(--ink)] hover:text-[var(--accent)]">{value}</a>
+                    ) : (
+                      <span className="text-sm font-semibold text-[var(--ink)]">{value}</span>
+                    )}
                   </div>
                 ))}
               </div>
