@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Questrial } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
-
-const Header = dynamic(() => import("@/components/Header"), { ssr: false });
-const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
-const FloatingElements = dynamic(() => import("@/components/FloatingElements"), { ssr: false });
+import SharedLayout from "@/components/SharedLayout";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -249,10 +245,7 @@ export default function RootLayout({
             }),
           }}
         />
-        <Header />
-        {children}
-        <Footer />
-        <FloatingElements />
+        <SharedLayout>{children}</SharedLayout>
       </body>
     </html>
   );
