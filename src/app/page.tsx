@@ -1,20 +1,16 @@
-"use client";
-
-import dynamic from "next/dynamic";
-
-const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
-const DoctorReveal = dynamic(() => import("@/components/DoctorReveal"), { ssr: false });
-const TrustBar = dynamic(() => import("@/components/TrustBar"), { ssr: false });
-const Services = dynamic(() => import("@/components/Services"), { ssr: false });
-const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: false });
-const StudioInvite = dynamic(() => import("@/components/StudioInvite"), { ssr: false });
-const InstagramGrid = dynamic(() => import("@/components/InstagramGrid"), { ssr: false });
-const CelebritySmiles = dynamic(() => import("@/components/CelebritySmiles"), { ssr: false });
-const Awards = dynamic(() => import("@/components/Awards"), { ssr: false });
-const MediaLogos = dynamic(() => import("@/components/MediaLogos"), { ssr: false });
-const SmileCases = dynamic(() => import("@/components/SmileCases"), { ssr: false });
-const FAQ = dynamic(() => import("@/components/FAQ"), { ssr: false });
-const Contact = dynamic(() => import("@/components/Contact"), { ssr: false });
+import Hero from "@/components/Hero";
+import DoctorReveal from "@/components/DoctorReveal";
+import TrustBar from "@/components/TrustBar";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import StudioInvite from "@/components/StudioInvite";
+import InstagramGrid from "@/components/InstagramGrid";
+import CelebritySmiles from "@/components/CelebritySmiles";
+import Awards from "@/components/Awards";
+import MediaLogos from "@/components/MediaLogos";
+import SmileCases from "@/components/SmileCases";
+import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (

@@ -62,12 +62,27 @@ export const metadata: Metadata = {
     siteName: "Prasad's Dental Clinic",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://prasadsdental.com/images/hero/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Prasad's Dental Clinic - Aesthetic Dentistry in Guntur",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Prasad's Dental Clinic | Cosmetic & General Dentistry in Guntur",
     description:
       "Expert cosmetic, general and restorative dental treatments in Pattabipuram, Guntur.",
+    images: ["https://prasadsdental.com/images/hero/hero-bg.jpg"],
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    other: {
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION || "",
+    },
   },
   robots: {
     index: true,

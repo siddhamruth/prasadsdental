@@ -1,0 +1,64 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+            cd /var/www/prasadsdental
+
+            # Pull latest changes
+            git fetch origin
+            git checkout main
+            git pull origin main
+
+            # Install dependencies
+            npm ci --production=false
+
+            # Build (standalone mode)
+            npm run build
+
+            # Copy static assets for standalone server
+            cp -r public .next/standalone/public
+            cp -r .next/static .next/standalone/.next/static
+
+            # Sync nginx config if changed
+            if ! diff -q nginx.conf /etc/nginx/sites-available/prasadsdental > /dev/null 2>&1; then
+              echo "Nginx config changed - updating..."
+              sudo cp nginx.conf /etc/nginx/sites-available/prasadsdental
+              sudo ln -sf /etc/nginx/sites-available/prasadsdental /etc/nginx/sites-enabled/prasadsdental
+              sudo nginx -t && sudo systemctl reload nginx
+            fi
+
+            # Restart app via PM2
+            pm2 restart prasadsdental || pm2 start ecosystem.config.js
+            pm2 save
+
+            echo "Deployment completed successfully"
+            pm2 status
+
+      - name: Deployment Failed
+        if: failure()
+        run: |
+          echo "Deployment failed! Check the logs above for details."
+          exit 1
