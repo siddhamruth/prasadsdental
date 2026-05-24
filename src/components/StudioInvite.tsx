@@ -34,7 +34,7 @@ export default function StudioInvite() {
               experience the Prasad&apos;s Dental difference for yourself.
             </p>
             <a
-              href="#contact"
+              href="/contact"
               className="mt-8 inline-block rounded-full bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition hover:-translate-y-0.5 hover:bg-[var(--cream)]"
             >
               Book an Appointment
