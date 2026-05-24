@@ -2,13 +2,11 @@ import Hero from "@/components/Hero";
 import DoctorReveal from "@/components/DoctorReveal";
 import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";
+import SmileCases from "@/components/SmileCases";
 import Testimonials from "@/components/Testimonials";
 import StudioInvite from "@/components/StudioInvite";
-import InstagramGrid from "@/components/InstagramGrid";
-import CelebritySmiles from "@/components/CelebritySmiles";
 import Awards from "@/components/Awards";
-import MediaLogos from "@/components/MediaLogos";
-import SmileCases from "@/components/SmileCases";
+import InstagramGrid from "@/components/InstagramGrid";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 
@@ -19,13 +17,11 @@ export default function Home() {
       <DoctorReveal />
       <TrustBar />
       <Services />
+      <SmileCases />
       <Testimonials />
       <StudioInvite />
-      <InstagramGrid />
-      <CelebritySmiles />
       <Awards />
-      <MediaLogos />
-      <SmileCases />
+      <InstagramGrid />
       <FAQ />
       <Contact />
     </main>

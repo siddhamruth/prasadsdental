@@ -36,12 +36,12 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex flex-col gap-3">
               {[
-                { label: "Home", href: "#top" },
-                { label: "About Dr. Prasad", href: "#doctor" },
-                { label: "Services", href: "#services" },
-                { label: "Results", href: "#results" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Contact", href: "#contact" },
+                { label: "Home", href: "/" },
+                { label: "About Dr. Prasad", href: "/about" },
+                { label: "Services", href: "/services" },
+                { label: "Results", href: "/#results" },
+                { label: "FAQ", href: "/#faq" },
+                { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <a
                   key={link.label}
@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-[var(--muted)]">
               <a href="tel:09398615727" className="transition hover:text-[var(--accent)]">09398615727</a>
-              <a href="mailto:hello@prasadsdental.com" className="transition hover:text-[var(--accent)]">hello@prasadsdental.com</a>
+              <a href="mailto:prasadsdentalclinic@gmail.com" className="transition hover:text-[var(--accent)]">prasadsdentalclinic@gmail.com</a>
               <p>10am – 8pm, Mon – Sat</p>
             </div>
           </div>

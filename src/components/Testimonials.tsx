@@ -6,37 +6,37 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Nitibha K.",
+    name: "Divya R.",
     treatment: "Whitening & Cleaning",
     quote: "I regularly visit for whitening and cleaning because the results are always consistent. The dentist explains everything clearly and makes the whole experience smooth.",
     image: "/images/testimonials/person-1.jpg",
   },
   {
-    name: "Pratiksha M.",
+    name: "Lavanya M.",
     treatment: "Gaps Closed with Veneers",
     quote: "I had small gaps in my front teeth that always bothered me. Veneers closed them perfectly without making my teeth look bulky. The colour match is spot-on.",
     image: "/images/testimonials/person-2.jpg",
   },
   {
-    name: "Sobia",
+    name: "Kavitha S.",
     treatment: "Teeth Whitening",
     quote: "Got my teeth whitening done and I'm so glad I finally did. The shade difference was instant and the whole session was super comfortable.",
     image: "/images/testimonials/person-3.jpg",
   },
   {
-    name: "Zayn",
+    name: "Venkat R.",
     treatment: "Cleaning & Veneers",
     quote: "I first came in for a cleaning and loved how fresh my teeth felt, so I decided to get veneers too. The result looks incredibly natural and not overdone.",
     image: "/images/testimonials/person-4.jpg",
   },
   {
-    name: "Dr. Sachin",
+    name: "Dr. Ravi Kumar",
     treatment: "Gaps Closed with Veneers",
     quote: "As a doctor, I'm very particular about aesthetics. My spacing issues were corrected beautifully with veneers. The finish is extremely natural and precise.",
     image: "/images/testimonials/person-5.jpg",
   },
   {
-    name: "Bhavna",
+    name: "Padmaja N.",
     treatment: "Family Dentist",
     quote: "My whole family visits for routine cleanings and we've always had great experiences. The doctors are patient, friendly, and thorough.",
     image: "/images/testimonials/person-1.jpg",
@@ -48,7 +48,7 @@ const testimonials = [
     image: "/images/testimonials/person-2.jpg",
   },
   {
-    name: "Guneet",
+    name: "Srikanth G.",
     treatment: "Porcelain Veneers",
     quote: "I wanted a natural-looking smile makeover, and the porcelain veneers turned out better than I expected. They look seamless, not fake.",
     image: "/images/testimonials/person-3.jpg",
@@ -60,7 +60,7 @@ const testimonials = [
     image: "/images/testimonials/person-4.jpg",
   },
   {
-    name: "Ruhanika",
+    name: "Sunitha M.",
     treatment: "Aligners",
     quote: "I've been on aligners for a few months and can already see a clear difference. They're comfortable, invisible, and easy to manage.",
     image: "/images/testimonials/person-5.jpg",

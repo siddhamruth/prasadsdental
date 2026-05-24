@@ -46,9 +46,9 @@ export default function Contact() {
             </div>
             <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
               <p className="text-xs uppercase tracking-[0.24em] text-white/62">Email</p>
-              <p className="mt-3 text-base font-medium leading-7 text-white">
-                hello@prasadsdental.com
-              </p>
+              <a href="mailto:prasadsdentalclinic@gmail.com" className="mt-3 block text-base font-medium leading-7 text-white hover:underline">
+                prasadsdentalclinic@gmail.com
+              </a>
             </div>
             <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-sm">
               <p className="text-xs uppercase tracking-[0.24em] text-white/62">Hours</p>
